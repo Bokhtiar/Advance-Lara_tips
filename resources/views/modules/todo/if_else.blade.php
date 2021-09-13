@@ -6,7 +6,7 @@
         <div class="col-md-4">
             <h4>Create Form</h4>
             <form action="{{ url('todo') }}" method="POST" class="form-group">
-           
+
                 @method('POST')
                 <input type="text" name="title" placeholder="title" class="form-control">
                 <textarea name="description" id="" cols="10" placeholder="description" rows="4" class="form-control"></textarea>
@@ -32,6 +32,9 @@
                         <td>{{ $item->description }}</td>
                         <td>
                             <span class="">active</span>
+                        </td>
+                        <td>
+                            <a href="@route('todo.show', $item->id)">show</a>
                         </td>
                       </tr>
                     @empty

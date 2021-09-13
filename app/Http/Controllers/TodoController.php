@@ -51,7 +51,7 @@ class TodoController extends Controller
      */
     public function show(Todo $todo)
     {
-        //
+        return view('modules.todo.show',compact('todo'));
     }
 
     /**

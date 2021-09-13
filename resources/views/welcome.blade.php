@@ -12,7 +12,7 @@
   </head>
   <body class="text-center">
     <ul class="list-group">
-        <li class="list-group-item"> <a href="{{ url('todo') }}">Todo</a> </li>
+        <li class="list-group-item"> <a href="@route('todo.index')">Todo</a> </li>
         <li class="list-group-item">A second item</li>
         <li class="list-group-item">A third item</li>
         <li class="list-group-item">A fourth item</li>
