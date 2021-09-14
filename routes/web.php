@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\TodoController;
+use App\Models\Todo;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,4 +19,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('todo', TodoController::class);
+
+
+Route::match(array('GET', 'POST'), '/r', function()
+{
+    // $todos = Todo::all();
+    // return view('modules.todo.if_else', compact('todos'));
+
+});
+
+Route::get('/todo/{title?}', [\App\Http\Controllers\Contact::class, 'index']);
+
+ Route::resource('todo', TodoController::class);
