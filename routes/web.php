@@ -30,4 +30,17 @@ Route::match(array('GET', 'POST'), '/r', function()
 
 Route::get('/todo/{title?}', [\App\Http\Controllers\Contact::class, 'index']);
 
- Route::resource('todo', TodoController::class);
+Route::resource('todo', TodoController::class);
+
+Route::get('/todos/{todo:slug}', function (Todo $post) {
+    return $todo;
+});
+
+
+Route::fallback(function () {
+    return view('errors.404');
+});
+
+
+
+
