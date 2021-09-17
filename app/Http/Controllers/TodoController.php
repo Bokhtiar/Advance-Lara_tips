@@ -87,4 +87,9 @@ class TodoController extends Controller
     {
         //
     }
+
+    public function check_middleware($id)
+    {
+        dd('checked middleware');
+    }
 }
