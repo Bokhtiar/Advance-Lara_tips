@@ -46,6 +46,6 @@ Route::fallback(function () {
 
 // middleware start
 
-Route::get('/check-todo/{id}', [\App\Http\Controllers\TodoController::class, 'check_middleware'])->middleware('checkAge:1');
+Route::get('/check-todo', [\App\Http\Controllers\TodoController::class, 'check_middleware'])->middleware('checkAge:1');
 
 
