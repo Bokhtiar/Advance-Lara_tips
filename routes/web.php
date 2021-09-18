@@ -4,6 +4,7 @@ use App\Http\Controllers\TodoController;
 use App\Http\Controllers\ProvisionServer;
 use App\Models\Todo;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,9 +30,13 @@ Route::match(array('GET', 'POST'), '/r', function()
 
 });
 
-Route::get('/todo/{title?}', [\App\Http\Controllers\Contact::class, 'index']);
+// Route::get('/todo/{title?}', [\App\Http\Controllers\Contact::class, 'index']);
 
-Route::resource('todo', TodoController::class);
+    //any missing route redirect to todo.index url
+    Route::resource('todo', TodoController::class)
+        ->missing( function(Request $request){
+        return redirect()->route('todo.index');
+    });
 
 Route::get('/todos/{todo:slug}', function (Todo $post) {
     return $todo;
