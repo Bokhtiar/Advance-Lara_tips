@@ -15,7 +15,10 @@
         <li class="list-group-item"> <a href="@route('todo.index')">Todo</a> </li>
         <li class="list-group-item"><a href="{{ url('todo/customer') }}">customer</a></li>
         <li class="list-group-item"><a href="{{ url('todo/staff') }}">staff</a></li>
+        <span>Middleware</span>
         <li class="list-group-item"><a href="{{ url('check-todo') }}">Check Middleware</a></li>
+        <span>Controller</span>
+        <li class="list-group-item"><a href="@route('single')">Signle(invokable)</a></li>
         <li class="list-group-item">And a fifth one</li>
       </ul>
 

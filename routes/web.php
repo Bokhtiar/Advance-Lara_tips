@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\TodoController;
+use App\Http\Controllers\ProvisionServer;
 use App\Models\Todo;
 use Illuminate\Support\Facades\Route;
 
@@ -47,5 +48,8 @@ Route::fallback(function () {
 // middleware start
 
 Route::get('/check-todo', [\App\Http\Controllers\TodoController::class, 'check_middleware'])->middleware('checkAge:1');
+
+Route::get('/single', 'ProvisionServer@')->name('single');
+
 
 
