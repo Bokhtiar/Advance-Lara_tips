@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PartialRouteCheckController;
 use App\Http\Controllers\TodoController;
 use App\Http\Controllers\ProvisionServer;
 use App\Models\Todo;
@@ -20,6 +21,17 @@ use Illuminate\Http\Request;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+    //any missing route redirect to todo.index url
+    Route::resource('todo', TodoController::class)
+        ->missing( function(Request $request){
+        return redirect()->route('todo.index');
+    });
+
+    Route::resource('partial', PartialRouteCheckController::class)->only([
+        'index','create'
+    ]);
 
 
 

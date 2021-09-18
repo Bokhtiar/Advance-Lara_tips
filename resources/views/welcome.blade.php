@@ -19,7 +19,8 @@
         <li class="list-group-item"><a href="{{ url('check-todo') }}">Check Middleware</a></li>
         <span>Controller</span>
         <li class="list-group-item"><a href="@route('single')">Signle(invokable)</a></li>
-        <li class="list-group-item">And a fifth one</li>
+        <li class="list-group-item"><a href="@route('partial.index')">partial route</a></li>
+
       </ul>
 
       @yield('cotnent')
