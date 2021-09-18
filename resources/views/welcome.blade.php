@@ -20,6 +20,7 @@
         <span>Controller</span>
         <li class="list-group-item"><a href="@route('single')">Signle(invokable)</a></li>
         <li class="list-group-item"><a href="@route('partial.index')">partial route</a></li>
+        <li class="list-group-item"><a href="@route('except-partial.index')">Except partial route</a></li>
 
       </ul>
 

@@ -30,8 +30,12 @@ Route::get('/', function () {
     });
 
     Route::resource('partial', PartialRouteCheckController::class)->only([
-        'index','create'
-    ]);
+        'index','create','edit'
+    ]); //this partial route only work this function
+
+    Route::resource('except-partial', PartialRouteCheckController::class)->except([
+        'create',
+    ]);//but axcept declare function not working
 
 
 
