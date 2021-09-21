@@ -12,8 +12,11 @@ class TodoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+
+        $path = $request->path();
+        //dd($path);
         $todos = Todo::all();
         return view('modules.todo.if_else', compact('todos'));
     }
@@ -36,11 +39,16 @@ class TodoController extends Controller
      */
     public function store(Request $request)
     {
-        Todo::create([
-            'title' => $request->title,
-            'description' => $request->description,
-        ]);
-        return redirect('todo');
+        if($request->has('title')){
+            Todo::create([
+                'title' => $request->title,
+                'description' => $request->description,
+            ]);
+            return redirect('todo');
+        }else{
+            return redirect('/');
+        }
+
     }
 
     /**
@@ -91,5 +99,11 @@ class TodoController extends Controller
     public function check_middleware()
     {
         echo "checked middleware";
+    }
+
+    public function contact(Request $request)
+    {
+        dd('test');
+        dd($request->query('supplier'));
     }
 }

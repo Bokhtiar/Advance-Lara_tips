@@ -66,11 +66,18 @@ Route::fallback(function () {
 //end of route
 
 
+
 // middleware start
 
 Route::get('/check-todo', [\App\Http\Controllers\TodoController::class, 'check_middleware'])->middleware('checkAge:1');
 
 Route::get('/single', 'ProvisionServer@')->name('single');
 
+
+//contact info
+Route::get('/contact/{value}', [\App\Http\Controllers\TodoController::class, 'contact']);
+
+//without controller page show
+Route::view('/about', 'about');
 
 

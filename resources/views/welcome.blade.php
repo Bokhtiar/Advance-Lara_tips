@@ -21,6 +21,9 @@
         <li class="list-group-item"><a href="@route('single')">Signle(invokable)</a></li>
         <li class="list-group-item"><a href="@route('partial.index')">partial route</a></li>
         <li class="list-group-item"><a href="@route('except-partial.index')">Except partial route</a></li>
+        <span>Contact</span>
+        <li class="list-group-item"><a href="{{ url('contact?contact=0') }}">supplier</a></li>
+        <li class="list-group-item"><a href="{{ url('contact?contact=1') }}">customer</a></li>
 
       </ul>
 

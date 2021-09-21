@@ -1,12 +1,12 @@
 @extends('welcome')
 @section('cotnent')
-
+<x-header></x-header>
 <section class="container">
     <div class="row">
         <div class="col-md-4">
             <h4>Create Form</h4>
             <form action="{{ url('todo') }}" method="POST" class="form-group">
-
+                @csrf
                 @method('POST')
                 <input type="text" name="title" placeholder="title" class="form-control">
                 <textarea name="description" id="" cols="10" placeholder="description" rows="4" class="form-control"></textarea>
@@ -45,5 +45,4 @@
         </div>
     </div>
 </section>
-
 @endsection

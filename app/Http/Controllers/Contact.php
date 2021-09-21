@@ -22,9 +22,11 @@ class Contact extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        dd('test');
+        dd($request->query('supplier'));
+
     }
 
     /**
