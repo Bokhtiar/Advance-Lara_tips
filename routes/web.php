@@ -32,6 +32,8 @@ Route::get('/', function () {
 });
 
 Route::get('/check_curl', [\App\Http\Controllers\HomeController::class, 'getData']);
+Route::get('/date', [\App\Http\Controllers\HomeController::class, 'date']);
+Route::post('/date/store', [\App\Http\Controllers\HomeController::class, 'date_store']);
 
 
 
