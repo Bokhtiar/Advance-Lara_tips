@@ -12,6 +12,7 @@
   </head>
   <body class="text-center">
     <ul class="list-group">
+        <li class="list-group-item"> <a href="{{ url('check_curl') }}">Crul request check</a> </li>
         <li class="list-group-item"> <a href="@route('todo.index')">Todo</a> </li>
         <li class="list-group-item"><a href="{{ url('todo/customer') }}">customer</a></li>
         <li class="list-group-item"><a href="{{ url('todo/staff') }}">staff</a></li>

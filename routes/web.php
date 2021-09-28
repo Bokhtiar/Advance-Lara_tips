@@ -22,6 +22,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/check_curl', [\App\Http\Controllers\HomeController::class, 'getData']);
+
+
 
     //any missing route redirect to todo.index url
     Route::resource('todo', TodoController::class)
@@ -79,5 +82,3 @@ Route::get('/contact/{value}', [\App\Http\Controllers\TodoController::class, 'co
 
 //without controller page show
 Route::view('/about', 'about');
-
-
