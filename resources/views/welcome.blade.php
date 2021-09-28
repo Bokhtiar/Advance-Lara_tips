@@ -12,7 +12,9 @@
   </head>
   <body class="text-center">
     <ul class="list-group">
+
         <li class="list-group-item"> <a href="{{ url('check_curl') }}">Crul request check</a> </li>
+        <li class="list-group-item"><a href="{{ url('editor') }}">Summernote Editor</a></li>
         <li class="list-group-item"> <a href="{{ url('user-location') }}">user location</a> </li>
         <li class="list-group-item"> <a href="{{ url('date') }}">tow date get data as like 10-12 all user</a> </li>
         <li class="list-group-item"> <a href="@route('todo.index')">Todo</a> </li>
@@ -31,6 +33,9 @@
       </ul>
 
       @yield('cotnent')
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
   </body>

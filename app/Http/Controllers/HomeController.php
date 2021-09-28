@@ -35,4 +35,9 @@ class HomeController extends Controller
        return Todo::whereBetween('created_at',[$start_date,$end_date])->get();
     }
 
+    public function editor()
+    {
+        return view('editor');
+    }
+
 }
