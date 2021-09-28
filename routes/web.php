@@ -18,6 +18,15 @@ use Illuminate\Http\Request;
 |
 */
 
+
+Route::get('user-location', function () {
+
+	$ip = '203.190.11.3';
+    $data = \Location::get($ip);
+    dd($data->countryName);
+
+});
+
 Route::get('/', function () {
     return view('welcome');
 });

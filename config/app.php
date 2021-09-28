@@ -177,6 +177,8 @@ return [
 
         //curl
         Ixudra\Curl\CurlServiceProvider::class,
+        //user location
+        Stevebauman\Location\LocationServiceProvider::class,
 
 
     ],
@@ -235,6 +237,8 @@ return [
 
         //crul
         'Curl' => Ixudra\Curl\Facades\Curl::class,
+        //user location
+        'Location' => 'Stevebauman\Location\Facades\Location',
 
     ],
 

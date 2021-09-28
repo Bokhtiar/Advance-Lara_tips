@@ -15,8 +15,7 @@ class TodoController extends Controller
     public function index(Request $request)
     {
 
-        $path = $request->path();
-        //dd($path);
+        // $path = $request->path();
         $todos = Todo::all();
         return view('modules.todo.if_else', compact('todos'));
     }
