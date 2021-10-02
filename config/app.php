@@ -239,6 +239,8 @@ return [
         'Curl' => Ixudra\Curl\Facades\Curl::class,
         //user location
         'Location' => 'Stevebauman\Location\Facades\Location',
+        //custom helper facad function
+        'Helper' => App\Helpers\Helper::class,
 
     ],
 

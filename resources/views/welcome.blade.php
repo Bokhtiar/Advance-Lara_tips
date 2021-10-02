@@ -12,6 +12,7 @@
   </head>
   <body class="text-center">
     <ul class="list-group">
+        {{ Helper::iamhelperfunction() }}
 
         <li class="list-group-item"> <a href="{{ url('check_curl') }}">Crul request check</a> </li>
         <li class="list-group-item"><a href="{{ url('editor') }}">Summernote Editor</a></li>
