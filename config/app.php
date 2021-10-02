@@ -174,11 +174,14 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\TelescopeServiceProvider::class,
 
         //curl
         Ixudra\Curl\CurlServiceProvider::class,
         //user location
         Stevebauman\Location\LocationServiceProvider::class,
+        //laravel user block
+        Cog\Ban\Providers\BanServiceProvider::class,
 
 
     ],
@@ -241,6 +244,7 @@ return [
         'Location' => 'Stevebauman\Location\Facades\Location',
         //custom helper facad function
         'Helper' => App\Helpers\Helper::class,
+
 
     ],
 

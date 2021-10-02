@@ -19,6 +19,19 @@ use Illuminate\Http\Request;
 */
 
 
+
+
+Route::get('directive', function () {
+
+    $body = '';
+
+    if(request()->filled('body')){
+        $body = request()->body;
+    }
+
+    return view('directive', compact('body'));
+});
+
 Route::get('user-location', function () {
 
 	$ip = '203.190.11.3';
